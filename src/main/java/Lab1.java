@@ -75,10 +75,12 @@ public class Lab1 {
 	*/
 	   public static int fib(int n)
 	   {
+		   if(n < 1) { return 0; }
+		   
 		   int previousNum = 0;
 		   int currentNum = 1;
 		   
-		   for(int i = 0; i < n; i++) 
+		   for(int i = 0; i < n - 1; i++) 
 		   {
 			   int newCurrentNum = currentNum + previousNum;
 			   
@@ -86,7 +88,7 @@ public class Lab1 {
 			   currentNum = newCurrentNum;
 		   }
 		   
-		   return 0;
+		   return currentNum;
 	   }
 
 }
